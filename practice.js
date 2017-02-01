@@ -78,7 +78,8 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
-
+getYear.call(prius)
+getYear.call(mustang)
 
 //New Problem
 
@@ -92,14 +93,22 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getUsername function return?
 //Note(no tests)
-  //Answer Here
+  // undefined, i think. it will try and access the window object, which doesn't have a username.
 
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
-  //Answer Here
+  // the window object
 
 //Fix the getMyUsername invocation so that userName will be equal to 'iliketurtles'.
+
+// ignore this stuff >>
+
+// I get a blue screen (stop code: PAGE_FAULT_IN_NONPAGED_AREA what failed: HIDCLASS.SYS) randomly after my ux305ca laptop goes to sleep. I'm on version 1607 of insider previews.
+
+// 1372754677
+
+// https://answers.microsoft.com/en-us/insider?auth=1
